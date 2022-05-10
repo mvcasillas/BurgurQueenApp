@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="javax.swing.ButtonGroup" name="btnGroupHamburguesa">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btnGroupPan">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btnGroupPatatas">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btnGroupBebida">
+    </Component>
+    <Component class="javax.swing.ButtonGroup" name="btnGroupReparto">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -23,13 +35,249 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="513" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="1" min="-2" max="-2" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="437" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
+              <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnVegana" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnTernera" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnCerdo" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnPollo" alignment="0" min="-2" pref="101" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnNormal" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnIntegral" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnCenteno" alignment="0" min="-2" pref="92" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="btnCaseras" max="32767" attributes="0"/>
+                      <Component id="btnGajo" max="32767" attributes="0"/>
+                      <Component id="btnFritas" alignment="1" min="-2" pref="141" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="btnAgua" max="32767" attributes="0"/>
+                      <Component id="btnNaranja" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnLimon" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnCola" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnNestea" alignment="1" max="32767" attributes="0"/>
+                      <Component id="btnCerveza" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="67" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="130" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btnFritas" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btnCola" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnPollo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnNormal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnCerdo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnIntegral" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnGajo" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnNaranja" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnTernera" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCenteno" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnCaseras" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnLimon" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnVegana" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="btnNestea" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnAgua" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="btnCerveza" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JToggleButton" name="btnPollo">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupHamburguesa"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Pollo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnCerdo">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupHamburguesa"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cerdo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnTernera">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupHamburguesa"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Ternera (+1&#x20ac;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnVegana">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupHamburguesa"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Vegana (+1&#x20ac;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnNormal">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupPan"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Normal"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnIntegral">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupPan"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Integral"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnCenteno">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupPan"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Centeno"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnFritas">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupPatatas"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Patatas fritas"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnGajo">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupPatatas"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Patatas gajo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnCaseras">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupPatatas"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Patatas caseras (+1&#x20ac;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnCola">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupBebida"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Coca-cola"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnNaranja">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupBebida"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Fanta naranja"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnLimon">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupBebida"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Fanta lim&#xf3;n"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnNestea">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupBebida"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Nestea"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnAgua">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupBebida"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Agua"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnCerveza">
+          <Properties>
+            <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+              <ComponentRef name="btnGroupBebida"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Cerveza"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="610" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="437" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+  </SubComponents>
 </Form>

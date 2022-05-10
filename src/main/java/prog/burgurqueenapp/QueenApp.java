@@ -27,17 +27,170 @@ public class QueenApp extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnGroupHamburguesa = new javax.swing.ButtonGroup();
+        btnGroupPan = new javax.swing.ButtonGroup();
+        btnGroupPatatas = new javax.swing.ButtonGroup();
+        btnGroupBebida = new javax.swing.ButtonGroup();
+        btnGroupReparto = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        btnPollo = new javax.swing.JToggleButton();
+        btnCerdo = new javax.swing.JToggleButton();
+        btnTernera = new javax.swing.JToggleButton();
+        btnVegana = new javax.swing.JToggleButton();
+        btnNormal = new javax.swing.JToggleButton();
+        btnIntegral = new javax.swing.JToggleButton();
+        btnCenteno = new javax.swing.JToggleButton();
+        btnFritas = new javax.swing.JToggleButton();
+        btnGajo = new javax.swing.JToggleButton();
+        btnCaseras = new javax.swing.JToggleButton();
+        btnCola = new javax.swing.JToggleButton();
+        btnNaranja = new javax.swing.JToggleButton();
+        btnLimon = new javax.swing.JToggleButton();
+        btnNestea = new javax.swing.JToggleButton();
+        btnAgua = new javax.swing.JToggleButton();
+        btnCerveza = new javax.swing.JToggleButton();
+        jPanel2 = new javax.swing.JPanel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        btnGroupHamburguesa.add(btnPollo);
+        btnPollo.setText("Pollo");
+
+        btnGroupHamburguesa.add(btnCerdo);
+        btnCerdo.setText("Cerdo");
+
+        btnGroupHamburguesa.add(btnTernera);
+        btnTernera.setText("Ternera (+1€)");
+
+        btnGroupHamburguesa.add(btnVegana);
+        btnVegana.setText("Vegana (+1€)");
+
+        btnGroupPan.add(btnNormal);
+        btnNormal.setText("Normal");
+
+        btnGroupPan.add(btnIntegral);
+        btnIntegral.setText("Integral");
+
+        btnGroupPan.add(btnCenteno);
+        btnCenteno.setText("Centeno");
+
+        btnGroupPatatas.add(btnFritas);
+        btnFritas.setText("Patatas fritas");
+
+        btnGroupPatatas.add(btnGajo);
+        btnGajo.setText("Patatas gajo");
+
+        btnGroupPatatas.add(btnCaseras);
+        btnCaseras.setText("Patatas caseras (+1€)");
+
+        btnGroupBebida.add(btnCola);
+        btnCola.setText("Coca-cola");
+
+        btnGroupBebida.add(btnNaranja);
+        btnNaranja.setText("Fanta naranja");
+
+        btnGroupBebida.add(btnLimon);
+        btnLimon.setText("Fanta limón");
+
+        btnGroupBebida.add(btnNestea);
+        btnNestea.setText("Nestea");
+
+        btnGroupBebida.add(btnAgua);
+        btnAgua.setText("Agua");
+
+        btnGroupBebida.add(btnCerveza);
+        btnCerveza.setText("Cerveza");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnVegana)
+                    .addComponent(btnTernera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCerdo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnIntegral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(btnCaseras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnFritas, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnAgua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNaranja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLimon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCola, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnNestea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCerveza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(130, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnFritas)
+                        .addComponent(btnCola))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnPollo)
+                            .addComponent(btnNormal))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnCerdo)
+                            .addComponent(btnIntegral)
+                            .addComponent(btnGajo)
+                            .addComponent(btnNaranja))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnTernera)
+                            .addComponent(btnCenteno)
+                            .addComponent(btnCaseras)
+                            .addComponent(btnLimon))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnVegana)
+                            .addComponent(btnNestea))))
+                .addGap(18, 18, 18)
+                .addComponent(btnAgua)
+                .addGap(18, 18, 18)
+                .addComponent(btnCerveza)
+                .addGap(79, 79, 79))
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 610, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 437, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 513, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -79,5 +232,28 @@ public class QueenApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JToggleButton btnAgua;
+    private javax.swing.JToggleButton btnCaseras;
+    private javax.swing.JToggleButton btnCenteno;
+    private javax.swing.JToggleButton btnCerdo;
+    private javax.swing.JToggleButton btnCerveza;
+    private javax.swing.JToggleButton btnCola;
+    private javax.swing.JToggleButton btnFritas;
+    private javax.swing.JToggleButton btnGajo;
+    private javax.swing.ButtonGroup btnGroupBebida;
+    private javax.swing.ButtonGroup btnGroupHamburguesa;
+    private javax.swing.ButtonGroup btnGroupPan;
+    private javax.swing.ButtonGroup btnGroupPatatas;
+    private javax.swing.ButtonGroup btnGroupReparto;
+    private javax.swing.JToggleButton btnIntegral;
+    private javax.swing.JToggleButton btnLimon;
+    private javax.swing.JToggleButton btnNaranja;
+    private javax.swing.JToggleButton btnNestea;
+    private javax.swing.JToggleButton btnNormal;
+    private javax.swing.JToggleButton btnPollo;
+    private javax.swing.JToggleButton btnTernera;
+    private javax.swing.JToggleButton btnVegana;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
