@@ -5,6 +5,8 @@
  */
 package prog.burgurqueenapp;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author DAW
@@ -32,7 +34,8 @@ public class QueenApp extends javax.swing.JFrame {
         btnGroupPatatas = new javax.swing.ButtonGroup();
         btnGroupBebida = new javax.swing.ButtonGroup();
         btnGroupReparto = new javax.swing.ButtonGroup();
-        jPanel1 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanelHamburguesa = new javax.swing.JPanel();
         btnPollo = new javax.swing.JToggleButton();
         btnCerdo = new javax.swing.JToggleButton();
         btnTernera = new javax.swing.JToggleButton();
@@ -40,6 +43,9 @@ public class QueenApp extends javax.swing.JFrame {
         btnNormal = new javax.swing.JToggleButton();
         btnIntegral = new javax.swing.JToggleButton();
         btnCenteno = new javax.swing.JToggleButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanelComplementos = new javax.swing.JPanel();
         btnFritas = new javax.swing.JToggleButton();
         btnGajo = new javax.swing.JToggleButton();
         btnCaseras = new javax.swing.JToggleButton();
@@ -49,9 +55,47 @@ public class QueenApp extends javax.swing.JFrame {
         btnNestea = new javax.swing.JToggleButton();
         btnAgua = new javax.swing.JToggleButton();
         btnCerveza = new javax.swing.JToggleButton();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jPanelExtras = new javax.swing.JPanel();
+        boxDoble = new javax.swing.JCheckBox();
+        boxQueso = new javax.swing.JCheckBox();
+        boxPatatas = new javax.swing.JCheckBox();
+        spinnerKetchup = new javax.swing.JSpinner();
+        spinnerBarbacoa = new javax.swing.JSpinner();
+        spinnerThai = new javax.swing.JSpinner();
+        spinnerMostaza = new javax.swing.JSpinner();
+        labelKetchup = new javax.swing.JLabel();
+        labelBarbacoa = new javax.swing.JLabel();
+        labelMostaza = new javax.swing.JLabel();
+        labelThai = new javax.swing.JLabel();
+        jPanelCheckout = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        btnDomicilio = new javax.swing.JToggleButton();
+        btnRecogidaLocal = new javax.swing.JToggleButton();
+        btnCheckout = new javax.swing.JButton();
+        labelPrecioBase = new javax.swing.JLabel();
+        labelExtrasMenus = new javax.swing.JLabel();
+        labelExtras = new javax.swing.JLabel();
+        labelSalsas = new javax.swing.JLabel();
+        labelEnvioRecogida = new javax.swing.JLabel();
+        labelTotalSinIVA = new javax.swing.JLabel();
+        labelIVA = new javax.swing.JLabel();
+        labelTotalPVP = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 204));
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+
+        jPanelHamburguesa.setBackground(new java.awt.Color(255, 204, 255));
 
         btnGroupHamburguesa.add(btnPollo);
         btnPollo.setText("Pollo");
@@ -61,9 +105,19 @@ public class QueenApp extends javax.swing.JFrame {
 
         btnGroupHamburguesa.add(btnTernera);
         btnTernera.setText("Ternera (+1€)");
+        btnTernera.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                btnTerneraStateChanged(evt);
+            }
+        });
 
         btnGroupHamburguesa.add(btnVegana);
         btnVegana.setText("Vegana (+1€)");
+        btnVegana.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                btnVeganaStateChanged(evt);
+            }
+        });
 
         btnGroupPan.add(btnNormal);
         btnNormal.setText("Normal");
@@ -73,6 +127,62 @@ public class QueenApp extends javax.swing.JFrame {
 
         btnGroupPan.add(btnCenteno);
         btnCenteno.setText("Centeno");
+
+        jLabel1.setText("Elige la hamburguesa");
+
+        jLabel2.setText("Elige el pan");
+
+        javax.swing.GroupLayout jPanelHamburguesaLayout = new javax.swing.GroupLayout(jPanelHamburguesa);
+        jPanelHamburguesa.setLayout(jPanelHamburguesaLayout);
+        jPanelHamburguesaLayout.setHorizontalGroup(
+            jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                .addGap(129, 129, 129)
+                .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnTernera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCerdo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnVegana)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnIntegral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2))
+                .addGap(194, 194, 194))
+        );
+        jPanelHamburguesaLayout.setVerticalGroup(
+            jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                .addGap(205, 205, 205)
+                .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnPollo)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCerdo)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnTernera)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnVegana))
+                    .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnNormal)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnIntegral)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCenteno)))
+                .addContainerGap(179, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Customiza tu hamburguesa", jPanelHamburguesa);
+
+        jPanelComplementos.setBackground(new java.awt.Color(255, 204, 204));
 
         btnGroupPatatas.add(btnFritas);
         btnFritas.setText("Patatas fritas");
@@ -101,100 +211,375 @@ public class QueenApp extends javax.swing.JFrame {
         btnGroupBebida.add(btnCerveza);
         btnCerveza.setText("Cerveza");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnVegana)
-                    .addComponent(btnTernera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCerdo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnIntegral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(btnCaseras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnGajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnFritas, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+        jLabel3.setText("Elige las patatas");
+
+        jLabel4.setText("Elige la bebida");
+
+        javax.swing.GroupLayout jPanelComplementosLayout = new javax.swing.GroupLayout(jPanelComplementos);
+        jPanelComplementos.setLayout(jPanelComplementosLayout);
+        jPanelComplementosLayout.setHorizontalGroup(
+            jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelComplementosLayout.createSequentialGroup()
+                .addGap(138, 138, 138)
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(btnCaseras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnGajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnFritas, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3))
                 .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnAgua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnNaranja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLimon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCola, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnNestea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCerveza, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnAgua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnNaranja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnLimon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCola, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnNestea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCerveza, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(243, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(130, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        jPanelComplementosLayout.setVerticalGroup(
+            jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelComplementosLayout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(btnFritas)
                         .addComponent(btnCola))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnPollo)
-                            .addComponent(btnNormal))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCerdo)
-                            .addComponent(btnIntegral)
+                    .addGroup(jPanelComplementosLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnGajo)
                             .addComponent(btnNaranja))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnTernera)
-                            .addComponent(btnCenteno)
+                        .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnCaseras)
                             .addComponent(btnLimon))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnVegana)
-                            .addComponent(btnNestea))))
+                        .addComponent(btnNestea)))
                 .addGap(18, 18, 18)
                 .addComponent(btnAgua)
                 .addGap(18, 18, 18)
                 .addComponent(btnCerveza)
-                .addGap(79, 79, 79))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+        jTabbedPane1.addTab("Elige tus complementos", jPanelComplementos);
+
+        jPanelExtras.setBackground(new java.awt.Color(255, 221, 188));
+
+        boxDoble.setText("Hazla doble (+2€)");
+
+        boxQueso.setText("Extra de queso (+0.50€)");
+
+        boxPatatas.setText("Extra de patatas (+1€)");
+
+        spinnerKetchup.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
+        spinnerBarbacoa.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
+        spinnerThai.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
+        spinnerMostaza.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
+
+        labelKetchup.setText("Ketchup");
+
+        labelBarbacoa.setText("Barbacoa");
+
+        labelMostaza.setText("Mostaza");
+
+        labelThai.setText("Thai");
+
+        javax.swing.GroupLayout jPanelExtrasLayout = new javax.swing.GroupLayout(jPanelExtras);
+        jPanelExtras.setLayout(jPanelExtrasLayout);
+        jPanelExtrasLayout.setHorizontalGroup(
+            jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelExtrasLayout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(boxPatatas)
+                    .addComponent(boxQueso)
+                    .addComponent(boxDoble)
+                    .addGroup(jPanelExtrasLayout.createSequentialGroup()
+                        .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelExtrasLayout.createSequentialGroup()
+                                .addComponent(spinnerKetchup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(labelKetchup)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(spinnerBarbacoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelExtrasLayout.createSequentialGroup()
+                                .addComponent(spinnerMostaza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(labelMostaza)
+                                .addGap(54, 54, 54)
+                                .addComponent(spinnerThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelBarbacoa)
+                            .addComponent(labelThai))))
+                .addContainerGap(372, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 437, Short.MAX_VALUE)
+        jPanelExtrasLayout.setVerticalGroup(
+            jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelExtrasLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(boxDoble)
+                .addGap(18, 18, 18)
+                .addComponent(boxQueso)
+                .addGap(18, 18, 18)
+                .addComponent(boxPatatas)
+                .addGap(53, 53, 53)
+                .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(spinnerKetchup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerBarbacoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelKetchup)
+                    .addComponent(labelBarbacoa))
+                .addGap(36, 36, 36)
+                .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(spinnerMostaza, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spinnerThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelMostaza)
+                    .addComponent(labelThai))
+                .addContainerGap(268, Short.MAX_VALUE))
         );
+
+        jTabbedPane1.addTab("Extras", jPanelExtras);
+
+        jPanelCheckout.setBackground(new java.awt.Color(255, 255, 204));
+        jPanelCheckout.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentShown(java.awt.event.ComponentEvent evt) {
+                jPanelCheckoutComponentShown(evt);
+            }
+        });
+
+        jLabel5.setText("Menú básico");
+
+        jLabel6.setText("Extras menú");
+
+        jLabel7.setText("Extras opcionales");
+
+        jLabel8.setText("Salsas");
+
+        jLabel9.setText("Envío o recogida");
+
+        jLabel10.setText("Total sin IVA");
+
+        jLabel11.setText("IVA (21%)");
+
+        jLabel12.setText("PVP");
+
+        btnGroupReparto.add(btnDomicilio);
+        btnDomicilio.setText("A domicilio");
+
+        btnGroupReparto.add(btnRecogidaLocal);
+        btnRecogidaLocal.setText("Recogida en local");
+
+        btnCheckout.setText("Hacer pedido");
+        btnCheckout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCheckoutActionPerformed(evt);
+            }
+        });
+
+        labelPrecioBase.setText("8 €");
+
+        labelExtrasMenus.setText("0 €");
+
+        labelExtras.setText("0 €");
+
+        labelSalsas.setText("0 €");
+
+        labelEnvioRecogida.setText("0 €");
+
+        labelTotalSinIVA.setText("8 €");
+
+        labelIVA.setText("0 €");
+
+        labelTotalPVP.setText("0 €");
+
+        javax.swing.GroupLayout jPanelCheckoutLayout = new javax.swing.GroupLayout(jPanelCheckout);
+        jPanelCheckout.setLayout(jPanelCheckoutLayout);
+        jPanelCheckoutLayout.setHorizontalGroup(
+            jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8))
+                .addGap(165, 165, 165)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelExtrasMenus)
+                            .addComponent(labelPrecioBase))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(labelExtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelSalsas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTotalSinIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(labelTotalPVP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                        .addGap(208, 208, 208)
+                        .addComponent(btnCheckout))
+                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(btnDomicilio)
+                        .addGap(162, 162, 162)
+                        .addComponent(btnRecogidaLocal)))
+                .addContainerGap(208, Short.MAX_VALUE))
+        );
+        jPanelCheckoutLayout.setVerticalGroup(
+            jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                .addGap(139, 139, 139)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDomicilio)
+                    .addComponent(btnRecogidaLocal))
+                .addGap(36, 36, 36)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(labelPrecioBase))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(labelExtrasMenus))
+                .addGap(10, 10, 10)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(labelExtras))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(labelSalsas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(labelEnvioRecogida))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(labelTotalSinIVA))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(labelIVA))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(labelTotalPVP))
+                .addGap(66, 66, 66)
+                .addComponent(btnCheckout)
+                .addContainerGap(87, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("Check out", jPanelCheckout);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    /*DECLARACIÓN DE VARIABLES ESTÁTICAS*/
+    public static double totalSinIVA;
+    public static double IVA;
+    public static double totalConIVA;
+    
+    public static double extraHamburguesa;
+    public static double extraPatatasCaseras;
+    public static double extraHamburguesaDoble;
+    public static double extraQueso;
+    public static double extraPatatas;
+    public static int extraSalsas;
+    
+    private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
+        // TODO add your handling code here:
+        if(btnGroupHamburguesa.getSelection()==null){
+            JOptionPane.showMessageDialog(this, "¡No has seleccionado el tipo de hamburguesa!", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
+        }else 
+        if(btnGroupPan.getSelection()==null){
+            JOptionPane.showMessageDialog(this, "¡No has seleccionado el tipo de pan!", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
+        }else
+        if(btnGroupPatatas.getSelection()==null){
+            JOptionPane.showMessageDialog(this, "¡No has seleccionado el tipo de patatas!", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
+        }else
+        if(btnGroupBebida.getSelection()==null){
+            JOptionPane.showMessageDialog(this, "¡No has seleccionado una bebida!", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
+        }else
+        if(btnGroupReparto.getSelection()==null){
+            JOptionPane.showMessageDialog(this, "Por favor, elige primero el tipo de pedido (a domicilio o recogida en local)", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
+        }else{
+            //Esto es que está todo elegido
+            JOptionPane.showMessageDialog(this, "¡Oído cocina! Tu pedido está en marcha", "Pedido realizado", JOptionPane.INFORMATION_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_btnCheckoutActionPerformed
+
+    private void btnTerneraStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnTerneraStateChanged
+        // TODO add your handling code here:
+        if(btnTernera.isSelected()){
+            extraHamburguesa=1;
+        }else{
+            extraHamburguesa=0;
+        }
+    }//GEN-LAST:event_btnTerneraStateChanged
+
+    private void btnVeganaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnVeganaStateChanged
+        // TODO add your handling code here:
+        if(btnVegana.isSelected()){
+            extraHamburguesa=1;
+        }else{
+            extraHamburguesa=0;
+        }
+    }//GEN-LAST:event_btnVeganaStateChanged
+
+    private void jPanelCheckoutComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelCheckoutComponentShown
+        // TODO add your handling code here:
+        // REFRESCAR LISTA DE CHECKOUT AL MOSTRAR TAB DE CHECKOUT
+        
+        totalSinIVA=8+extraHamburguesa+extraPatatasCaseras+extraHamburguesaDoble+extraQueso+extraPatatas+extraSalsas;
+        labelTotalSinIVA.setText(totalSinIVA+" €");
+        
+        labelExtrasMenus.setText((extraHamburguesa+extraPatatasCaseras)+" €");
+        
+        labelExtras.setText((extraHamburguesaDoble+extraQueso+extraPatatas)+" €");
+        
+        labelSalsas.setText((extraSalsas*0.50)+" €");
+        
+        IVA=totalSinIVA*0.21;
+        labelIVA.setText(IVA+" €");
+        
+        totalConIVA=totalSinIVA+IVA;
+        labelTotalPVP.setText(totalConIVA+" €");
+        
+        //System.out.println("hola component shown");
+    }//GEN-LAST:event_jPanelCheckoutComponentShown
 
     /**
      * @param args the command line arguments
@@ -232,12 +617,17 @@ public class QueenApp extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox boxDoble;
+    private javax.swing.JCheckBox boxPatatas;
+    private javax.swing.JCheckBox boxQueso;
     private javax.swing.JToggleButton btnAgua;
     private javax.swing.JToggleButton btnCaseras;
     private javax.swing.JToggleButton btnCenteno;
     private javax.swing.JToggleButton btnCerdo;
     private javax.swing.JToggleButton btnCerveza;
+    private javax.swing.JButton btnCheckout;
     private javax.swing.JToggleButton btnCola;
+    private javax.swing.JToggleButton btnDomicilio;
     private javax.swing.JToggleButton btnFritas;
     private javax.swing.JToggleButton btnGajo;
     private javax.swing.ButtonGroup btnGroupBebida;
@@ -251,9 +641,41 @@ public class QueenApp extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnNestea;
     private javax.swing.JToggleButton btnNormal;
     private javax.swing.JToggleButton btnPollo;
+    private javax.swing.JToggleButton btnRecogidaLocal;
     private javax.swing.JToggleButton btnTernera;
     private javax.swing.JToggleButton btnVegana;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanelCheckout;
+    private javax.swing.JPanel jPanelComplementos;
+    private javax.swing.JPanel jPanelExtras;
+    private javax.swing.JPanel jPanelHamburguesa;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel labelBarbacoa;
+    private javax.swing.JLabel labelEnvioRecogida;
+    private javax.swing.JLabel labelExtras;
+    private javax.swing.JLabel labelExtrasMenus;
+    private javax.swing.JLabel labelIVA;
+    private javax.swing.JLabel labelKetchup;
+    private javax.swing.JLabel labelMostaza;
+    private javax.swing.JLabel labelPrecioBase;
+    private javax.swing.JLabel labelSalsas;
+    private javax.swing.JLabel labelThai;
+    private javax.swing.JLabel labelTotalPVP;
+    private javax.swing.JLabel labelTotalSinIVA;
+    private javax.swing.JSpinner spinnerBarbacoa;
+    private javax.swing.JSpinner spinnerKetchup;
+    private javax.swing.JSpinner spinnerMostaza;
+    private javax.swing.JSpinner spinnerThai;
     // End of variables declaration//GEN-END:variables
 }
