@@ -5,6 +5,9 @@
  */
 package prog.burgurqueenapp;
 
+import java.awt.Graphics;
+import java.util.Objects;
+import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 /**
@@ -18,7 +21,14 @@ public class QueenApp extends javax.swing.JFrame {
      */
     public QueenApp() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
+    
+//    @Override
+//    public void paint(Graphics g){
+//        ImageIcon imagenfondo= new ImageIcon(Objects.requireNonNull(
+//                this.getClass().getResource("/images/graficoBlank.jpg")));
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -91,19 +101,26 @@ public class QueenApp extends javax.swing.JFrame {
         labelTotalPVP = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(181, 255, 213));
 
-        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 204));
+        jTabbedPane1.setBackground(new java.awt.Color(204, 255, 204));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.setToolTipText("");
+        jTabbedPane1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jPanelHamburguesa.setBackground(new java.awt.Color(255, 204, 255));
+        jPanelHamburguesa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         btnGroupHamburguesa.add(btnPollo);
+        btnPollo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnPollo.setText("Pollo");
 
         btnGroupHamburguesa.add(btnCerdo);
+        btnCerdo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCerdo.setText("Cerdo");
 
         btnGroupHamburguesa.add(btnTernera);
+        btnTernera.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnTernera.setText("Ternera (+1€)");
         btnTernera.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -112,6 +129,7 @@ public class QueenApp extends javax.swing.JFrame {
         });
 
         btnGroupHamburguesa.add(btnVegana);
+        btnVegana.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnVegana.setText("Vegana (+1€)");
         btnVegana.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
@@ -120,16 +138,21 @@ public class QueenApp extends javax.swing.JFrame {
         });
 
         btnGroupPan.add(btnNormal);
+        btnNormal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnNormal.setText("Normal");
 
         btnGroupPan.add(btnIntegral);
+        btnIntegral.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnIntegral.setText("Integral");
 
         btnGroupPan.add(btnCenteno);
+        btnCenteno.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCenteno.setText("Centeno");
 
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel1.setText("Elige la hamburguesa");
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Elige el pan");
 
         javax.swing.GroupLayout jPanelHamburguesaLayout = new javax.swing.GroupLayout(jPanelHamburguesa);
@@ -137,7 +160,7 @@ public class QueenApp extends javax.swing.JFrame {
         jPanelHamburguesaLayout.setHorizontalGroup(
             jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
-                .addGap(129, 129, 129)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -145,19 +168,19 @@ public class QueenApp extends javax.swing.JFrame {
                         .addComponent(btnCerdo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnVegana)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(btnNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnIntegral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel2))
-                .addGap(194, 194, 194))
+                .addGap(65, 65, 65))
         );
         jPanelHamburguesaLayout.setVerticalGroup(
             jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
-                .addGap(205, 205, 205)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHamburguesaLayout.createSequentialGroup()
+                .addContainerGap(188, Short.MAX_VALUE)
                 .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -166,9 +189,7 @@ public class QueenApp extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(btnCerdo)
                         .addGap(18, 18, 18)
-                        .addComponent(btnTernera)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnVegana))
+                        .addComponent(btnTernera))
                     .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
@@ -177,50 +198,64 @@ public class QueenApp extends javax.swing.JFrame {
                         .addComponent(btnIntegral)
                         .addGap(18, 18, 18)
                         .addComponent(btnCenteno)))
-                .addContainerGap(179, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(btnVegana)
+                .addGap(189, 189, 189))
         );
 
-        jTabbedPane1.addTab("Customiza tu hamburguesa", jPanelHamburguesa);
+        jTabbedPane1.addTab("Hamburguesa", new javax.swing.ImageIcon(getClass().getResource("/images/iconBurgerSmall.png")), jPanelHamburguesa); // NOI18N
 
         jPanelComplementos.setBackground(new java.awt.Color(255, 204, 204));
+        jPanelComplementos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         btnGroupPatatas.add(btnFritas);
+        btnFritas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnFritas.setText("Patatas fritas");
 
         btnGroupPatatas.add(btnGajo);
+        btnGajo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnGajo.setText("Patatas gajo");
 
         btnGroupPatatas.add(btnCaseras);
+        btnCaseras.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCaseras.setText("Patatas caseras (+1€)");
 
         btnGroupBebida.add(btnCola);
+        btnCola.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCola.setText("Coca-cola");
 
         btnGroupBebida.add(btnNaranja);
+        btnNaranja.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnNaranja.setText("Fanta naranja");
 
         btnGroupBebida.add(btnLimon);
+        btnLimon.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnLimon.setText("Fanta limón");
 
         btnGroupBebida.add(btnNestea);
+        btnNestea.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnNestea.setText("Nestea");
 
         btnGroupBebida.add(btnAgua);
+        btnAgua.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnAgua.setText("Agua");
 
         btnGroupBebida.add(btnCerveza);
+        btnCerveza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCerveza.setText("Cerveza");
 
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("Elige las patatas");
 
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Elige la bebida");
 
         javax.swing.GroupLayout jPanelComplementosLayout = new javax.swing.GroupLayout(jPanelComplementos);
         jPanelComplementos.setLayout(jPanelComplementosLayout);
         jPanelComplementosLayout.setHorizontalGroup(
             jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelComplementosLayout.createSequentialGroup()
-                .addGap(138, 138, 138)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelComplementosLayout.createSequentialGroup()
+                .addContainerGap(193, Short.MAX_VALUE)
                 .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(btnCaseras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -237,12 +272,12 @@ public class QueenApp extends javax.swing.JFrame {
                         .addComponent(btnCola, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnNestea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnCerveza, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addGap(77, 77, 77))
         );
         jPanelComplementosLayout.setVerticalGroup(
             jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelComplementosLayout.createSequentialGroup()
-                .addGap(135, 135, 135)
+                .addGap(143, 143, 143)
                 .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
@@ -265,41 +300,53 @@ public class QueenApp extends javax.swing.JFrame {
                 .addComponent(btnAgua)
                 .addGap(18, 18, 18)
                 .addComponent(btnCerveza)
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(168, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Elige tus complementos", jPanelComplementos);
+        jTabbedPane1.addTab("Complementos", new javax.swing.ImageIcon(getClass().getResource("/images/iconPapasSmall.png")), jPanelComplementos); // NOI18N
 
         jPanelExtras.setBackground(new java.awt.Color(255, 221, 188));
+        jPanelExtras.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
+        boxDoble.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         boxDoble.setText("Hazla doble (+2€)");
 
+        boxQueso.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         boxQueso.setText("Extra de queso (+0.50€)");
 
+        boxPatatas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         boxPatatas.setText("Extra de patatas (+1€)");
 
+        spinnerKetchup.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         spinnerKetchup.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
 
+        spinnerBarbacoa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         spinnerBarbacoa.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
 
+        spinnerThai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         spinnerThai.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
 
+        spinnerMostaza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         spinnerMostaza.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
 
+        labelKetchup.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelKetchup.setText("Ketchup");
 
+        labelBarbacoa.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelBarbacoa.setText("Barbacoa");
 
+        labelMostaza.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelMostaza.setText("Mostaza");
 
+        labelThai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelThai.setText("Thai");
 
         javax.swing.GroupLayout jPanelExtrasLayout = new javax.swing.GroupLayout(jPanelExtras);
         jPanelExtras.setLayout(jPanelExtrasLayout);
         jPanelExtrasLayout.setHorizontalGroup(
             jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelExtrasLayout.createSequentialGroup()
-                .addGap(46, 46, 46)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelExtrasLayout.createSequentialGroup()
+                .addContainerGap(245, Short.MAX_VALUE)
                 .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(boxPatatas)
                     .addComponent(boxQueso)
@@ -322,12 +369,12 @@ public class QueenApp extends javax.swing.JFrame {
                         .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelBarbacoa)
                             .addComponent(labelThai))))
-                .addContainerGap(372, Short.MAX_VALUE))
+                .addGap(67, 67, 67))
         );
         jPanelExtrasLayout.setVerticalGroup(
             jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelExtrasLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
+                .addGap(137, 137, 137)
                 .addComponent(boxDoble)
                 .addGap(18, 18, 18)
                 .addComponent(boxQueso)
@@ -345,10 +392,10 @@ public class QueenApp extends javax.swing.JFrame {
                     .addComponent(spinnerThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMostaza)
                     .addComponent(labelThai))
-                .addContainerGap(268, Short.MAX_VALUE))
+                .addContainerGap(181, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Extras", jPanelExtras);
+        jTabbedPane1.addTab("Extras           ", new javax.swing.ImageIcon(getClass().getResource("/images/iconSalsasSmall.png")), jPanelExtras); // NOI18N
 
         jPanelCheckout.setBackground(new java.awt.Color(255, 255, 204));
         jPanelCheckout.addComponentListener(new java.awt.event.ComponentAdapter() {
@@ -357,28 +404,39 @@ public class QueenApp extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("Menú básico");
 
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("Extras menú");
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Extras opcionales");
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setText("Salsas");
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel9.setText("Envío o recogida");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel10.setText("Total sin IVA");
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel11.setText("IVA (21%)");
 
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel12.setText("PVP");
 
         btnGroupReparto.add(btnDomicilio);
+        btnDomicilio.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnDomicilio.setText("A domicilio");
 
         btnGroupReparto.add(btnRecogidaLocal);
+        btnRecogidaLocal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnRecogidaLocal.setText("Recogida en local");
 
+        btnCheckout.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCheckout.setText("Hacer pedido");
         btnCheckout.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -386,20 +444,28 @@ public class QueenApp extends javax.swing.JFrame {
             }
         });
 
+        labelPrecioBase.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelPrecioBase.setText("8 €");
 
+        labelExtrasMenus.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelExtrasMenus.setText("0 €");
 
+        labelExtras.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelExtras.setText("0 €");
 
+        labelSalsas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelSalsas.setText("0 €");
 
+        labelEnvioRecogida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelEnvioRecogida.setText("0 €");
 
+        labelTotalSinIVA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelTotalSinIVA.setText("8 €");
 
+        labelIVA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelIVA.setText("0 €");
 
+        labelTotalPVP.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelTotalPVP.setText("0 €");
 
         javax.swing.GroupLayout jPanelCheckoutLayout = new javax.swing.GroupLayout(jPanelCheckout);
@@ -407,52 +473,45 @@ public class QueenApp extends javax.swing.JFrame {
         jPanelCheckoutLayout.setHorizontalGroup(
             jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel11)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
-                .addGap(165, 165, 165)
-                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelExtrasMenus)
-                            .addComponent(labelPrecioBase))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelExtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelSalsas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTotalSinIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(labelTotalPVP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanelCheckoutLayout.createSequentialGroup()
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelCheckoutLayout.createSequentialGroup()
                         .addGap(208, 208, 208)
                         .addComponent(btnCheckout))
                     .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                        .addGap(83, 83, 83)
-                        .addComponent(btnDomicilio)
-                        .addGap(162, 162, 162)
-                        .addComponent(btnRecogidaLocal)))
-                .addContainerGap(208, Short.MAX_VALUE))
+                        .addGap(106, 106, 106)
+                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel8)
+                            .addComponent(btnDomicilio))
+                        .addGap(65, 65, 65)
+                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(labelExtrasMenus)
+                                .addComponent(labelPrecioBase)
+                                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(labelExtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelSalsas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelTotalSinIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelTotalPVP)))
+                            .addComponent(btnRecogidaLocal))))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         jPanelCheckoutLayout.setVerticalGroup(
             jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                .addGap(139, 139, 139)
+                .addGap(108, 108, 108)
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnDomicilio)
                     .addComponent(btnRecogidaLocal))
-                .addGap(36, 36, 36)
+                .addGap(71, 71, 71)
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(labelPrecioBase))
@@ -484,9 +543,9 @@ public class QueenApp extends javax.swing.JFrame {
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(labelTotalPVP))
-                .addGap(66, 66, 66)
+                .addGap(62, 62, 62)
                 .addComponent(btnCheckout)
-                .addContainerGap(87, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Check out", jPanelCheckout);
@@ -495,11 +554,11 @@ public class QueenApp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 757, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -561,7 +620,7 @@ public class QueenApp extends javax.swing.JFrame {
 
     private void jPanelCheckoutComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelCheckoutComponentShown
         // TODO add your handling code here:
-        // REFRESCAR LISTA DE CHECKOUT AL MOSTRAR TAB DE CHECKOUT
+        // REFRESCA LISTA DE CHECKOUT AL MOSTRAR TAB DE CHECKOUT
         
         totalSinIVA=8+extraHamburguesa+extraPatatasCaseras+extraHamburguesaDoble+extraQueso+extraPatatas+extraSalsas;
         labelTotalSinIVA.setText(totalSinIVA+" €");
@@ -607,7 +666,8 @@ public class QueenApp extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(QueenApp.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
+        //this.setLocationRelativeTo(null);
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
