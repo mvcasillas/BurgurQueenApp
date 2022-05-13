@@ -53,6 +53,7 @@ public class Controlador {
         totalSinIVAconDescuento= getTotalSinIVA();
         if(descuentoRecogidaLocal){
             totalSinIVAconDescuento=totalSinIVAconDescuento*0.8;
+            return totalSinIVAconDescuento;
         } 
         return totalSinIVA;
     }

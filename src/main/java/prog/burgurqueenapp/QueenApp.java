@@ -1064,6 +1064,8 @@ public class QueenApp extends javax.swing.JFrame {
             ctrl.setDescuentoRecogidaLocal(false);
             ctrl.setEnvioORecogida("Envío a domicilio");
             labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
+            labelIVA.setText(String.format("%.2f",ctrl.getIVA())+" €");
+            labelTotalPVP.setText(String.format("%.2f", ctrl.getPVPfinal())+" €");
         }else{
             ctrl.removeProducto("domicilio");
         }
@@ -1077,6 +1079,8 @@ public class QueenApp extends javax.swing.JFrame {
             ctrl.setDescuentoRecogidaLocal(true);
             ctrl.setEnvioORecogida("Recogida en local");
             labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
+            labelIVA.setText(String.format("%.2f",ctrl.getIVA())+" €");
+            labelTotalPVP.setText(String.format("%.2f", ctrl.getPVPfinal())+" €");
         }else{
             ctrl.removeProducto("recogida");
         }
