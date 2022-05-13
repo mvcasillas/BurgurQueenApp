@@ -24,6 +24,16 @@ public class QueenApp extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
+    private int getCuantasSalsas(){
+        int cuantas=0;
+        cuantas+=(Integer)spinnerKetchup.getValue();
+        cuantas+=(Integer)spinnerBarbacoa.getValue();
+        cuantas+=(Integer)spinnerMostaza.getValue();
+        cuantas+=(Integer)spinnerThai.getValue();        
+        
+        return cuantas;
+    }
+    
 //    @Override
 //    public void paint(Graphics g){
 //        ImageIcon imagenfondo= new ImageIcon(Objects.requireNonNull(
@@ -79,6 +89,7 @@ public class QueenApp extends javax.swing.JFrame {
         labelBarbacoa = new javax.swing.JLabel();
         labelMostaza = new javax.swing.JLabel();
         labelThai = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jPanelCheckout = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -103,12 +114,12 @@ public class QueenApp extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(181, 255, 213));
 
-        jTabbedPane1.setBackground(new java.awt.Color(204, 255, 204));
+        jTabbedPane1.setBackground(new java.awt.Color(153, 255, 204));
         jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
         jTabbedPane1.setToolTipText("");
         jTabbedPane1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jPanelHamburguesa.setBackground(new java.awt.Color(255, 204, 255));
+        jPanelHamburguesa.setBackground(new java.awt.Color(152, 234, 211));
         jPanelHamburguesa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         btnGroupHamburguesa.add(btnPollo);
@@ -160,52 +171,55 @@ public class QueenApp extends javax.swing.JFrame {
         jPanelHamburguesaLayout.setHorizontalGroup(
             jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(264, 264, 264)
                 .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnTernera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCerdo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnVegana)))
-                .addGap(79, 79, 79)
+                    .addComponent(btnCerdo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPollo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnTernera, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnVegana, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnIntegral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel2))
-                .addGap(65, 65, 65))
+                    .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel2)
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHamburguesaLayout.createSequentialGroup()
+                        .addGap(71, 71, 71)
+                        .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnNormal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnIntegral, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(53, 53, 53))
         );
         jPanelHamburguesaLayout.setVerticalGroup(
             jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelHamburguesaLayout.createSequentialGroup()
-                .addContainerGap(188, Short.MAX_VALUE)
+            .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
                 .addGroup(jPanelHamburguesaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPollo)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCerdo)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnTernera))
-                    .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnNormal)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnIntegral)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCenteno)))
-                .addGap(18, 18, 18)
-                .addComponent(btnVegana)
-                .addGap(189, 189, 189))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnNormal, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnIntegral, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCenteno, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanelHamburguesaLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnPollo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnCerdo, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnTernera, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnVegana, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(225, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hamburguesa", new javax.swing.ImageIcon(getClass().getResource("/images/iconBurgerSmall.png")), jPanelHamburguesa); // NOI18N
 
-        jPanelComplementos.setBackground(new java.awt.Color(255, 204, 204));
+        jPanelComplementos.setBackground(new java.awt.Color(152, 234, 211));
         jPanelComplementos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         btnGroupPatatas.add(btnFritas);
@@ -219,6 +233,11 @@ public class QueenApp extends javax.swing.JFrame {
         btnGroupPatatas.add(btnCaseras);
         btnCaseras.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         btnCaseras.setText("Patatas caseras (+1€)");
+        btnCaseras.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                btnCaserasStateChanged(evt);
+            }
+        });
 
         btnGroupBebida.add(btnCola);
         btnCola.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -254,68 +273,81 @@ public class QueenApp extends javax.swing.JFrame {
         jPanelComplementos.setLayout(jPanelComplementosLayout);
         jPanelComplementosLayout.setHorizontalGroup(
             jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelComplementosLayout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
+            .addGroup(jPanelComplementosLayout.createSequentialGroup()
+                .addContainerGap(213, Short.MAX_VALUE)
                 .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(btnCaseras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnGajo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnFritas, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel3))
-                .addGap(26, 26, 26)
+                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(btnCaseras, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnGajo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3)
+                    .addComponent(btnFritas, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(66, 66, 66)
                 .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel4)
-                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(btnAgua, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnNaranja, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnLimon, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCola, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnNestea, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnCerveza, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(77, 77, 77))
+                    .addComponent(btnCerveza, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNaranja)
+                    .addComponent(btnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLimon, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNestea, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(53, 53, 53))
         );
         jPanelComplementosLayout.setVerticalGroup(
             jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelComplementosLayout.createSequentialGroup()
-                .addGap(143, 143, 143)
+                .addGap(109, 109, 109)
                 .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jLabel4))
-                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(btnFritas)
-                        .addComponent(btnCola))
-                    .addGroup(jPanelComplementosLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnGajo)
-                            .addComponent(btnNaranja))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(btnCaseras)
-                            .addComponent(btnLimon))
-                        .addGap(18, 18, 18)
-                        .addComponent(btnNestea)))
-                .addGap(18, 18, 18)
-                .addComponent(btnAgua)
-                .addGap(18, 18, 18)
-                .addComponent(btnCerveza)
-                .addContainerGap(168, Short.MAX_VALUE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCola, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFritas, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnNaranja, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGajo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanelComplementosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnCaseras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLimon, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnNestea, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnAgua, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCerveza, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Complementos", new javax.swing.ImageIcon(getClass().getResource("/images/iconPapasSmall.png")), jPanelComplementos); // NOI18N
 
-        jPanelExtras.setBackground(new java.awt.Color(255, 221, 188));
+        jPanelExtras.setBackground(new java.awt.Color(152, 234, 211));
         jPanelExtras.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         boxDoble.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         boxDoble.setText("Hazla doble (+2€)");
+        boxDoble.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                boxDobleStateChanged(evt);
+            }
+        });
 
         boxQueso.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         boxQueso.setText("Extra de queso (+0.50€)");
+        boxQueso.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                boxQuesoStateChanged(evt);
+            }
+        });
 
         boxPatatas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         boxPatatas.setText("Extra de patatas (+1€)");
+        boxPatatas.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                boxPatatasStateChanged(evt);
+            }
+        });
 
         spinnerKetchup.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         spinnerKetchup.setModel(new javax.swing.SpinnerNumberModel(0, 0, 10, 1));
@@ -341,12 +373,15 @@ public class QueenApp extends javax.swing.JFrame {
         labelThai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelThai.setText("Thai");
 
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel13.setText("Añade tus salsas (+0.50€/u)");
+
         javax.swing.GroupLayout jPanelExtrasLayout = new javax.swing.GroupLayout(jPanelExtras);
         jPanelExtras.setLayout(jPanelExtrasLayout);
         jPanelExtrasLayout.setHorizontalGroup(
             jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelExtrasLayout.createSequentialGroup()
-                .addContainerGap(245, Short.MAX_VALUE)
+                .addContainerGap(281, Short.MAX_VALUE)
                 .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(boxPatatas)
                     .addComponent(boxQueso)
@@ -368,19 +403,22 @@ public class QueenApp extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(labelBarbacoa)
-                            .addComponent(labelThai))))
+                            .addComponent(labelThai)))
+                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(67, 67, 67))
         );
         jPanelExtrasLayout.setVerticalGroup(
             jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelExtrasLayout.createSequentialGroup()
-                .addGap(137, 137, 137)
+                .addGap(116, 116, 116)
                 .addComponent(boxDoble)
                 .addGap(18, 18, 18)
                 .addComponent(boxQueso)
                 .addGap(18, 18, 18)
                 .addComponent(boxPatatas)
-                .addGap(53, 53, 53)
+                .addGap(81, 81, 81)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanelExtrasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(spinnerKetchup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(spinnerBarbacoa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -392,12 +430,12 @@ public class QueenApp extends javax.swing.JFrame {
                     .addComponent(spinnerThai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelMostaza)
                     .addComponent(labelThai))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Extras           ", new javax.swing.ImageIcon(getClass().getResource("/images/iconSalsasSmall.png")), jPanelExtras); // NOI18N
 
-        jPanelCheckout.setBackground(new java.awt.Color(255, 255, 204));
+        jPanelCheckout.setBackground(new java.awt.Color(152, 234, 211));
         jPanelCheckout.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 jPanelCheckoutComponentShown(evt);
@@ -473,45 +511,47 @@ public class QueenApp extends javax.swing.JFrame {
         jPanelCheckoutLayout.setHorizontalGroup(
             jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addComponent(btnDomicilio, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 134, Short.MAX_VALUE)
+                .addComponent(btnRecogidaLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(112, 112, 112))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelCheckoutLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(226, 226, 226))
+            .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                .addGap(135, 135, 135)
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                        .addGap(208, 208, 208)
-                        .addComponent(btnCheckout))
-                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(btnDomicilio))
-                        .addGap(65, 65, 65)
-                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(labelExtrasMenus)
-                                .addComponent(labelPrecioBase)
-                                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(labelExtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelSalsas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelTotalSinIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(labelTotalPVP)))
-                            .addComponent(btnRecogidaLocal))))
-                .addContainerGap(166, Short.MAX_VALUE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel7)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelExtrasMenus)
+                    .addComponent(labelPrecioBase)
+                    .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(labelExtras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelSalsas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelTotalSinIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelIVA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelTotalPVP)))
+                .addGap(176, 176, 176))
         );
         jPanelCheckoutLayout.setVerticalGroup(
             jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCheckoutLayout.createSequentialGroup()
                 .addGap(108, 108, 108)
-                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnDomicilio)
-                    .addComponent(btnRecogidaLocal))
-                .addGap(71, 71, 71)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnDomicilio, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                    .addComponent(btnRecogidaLocal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(42, 42, 42)
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(labelPrecioBase))
@@ -543,9 +583,9 @@ public class QueenApp extends javax.swing.JFrame {
                 .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
                     .addComponent(labelTotalPVP))
-                .addGap(62, 62, 62)
-                .addComponent(btnCheckout)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(btnCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
         );
 
         jTabbedPane1.addTab("Check out", jPanelCheckout);
@@ -554,7 +594,7 @@ public class QueenApp extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 757, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -564,20 +604,11 @@ public class QueenApp extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /*DECLARACIÓN DE VARIABLES ESTÁTICAS*/
-    public static double totalSinIVA;
-    public static double IVA;
-    public static double totalConIVA;
-    
-    public static double extraHamburguesa;
-    public static double extraPatatasCaseras;
-    public static double extraHamburguesaDoble;
-    public static double extraQueso;
-    public static double extraPatatas;
-    public static int extraSalsas;
+    /*DECLARACIÓN DEL CONTROLADOR*/
+    protected static Controlador ctrl = new Controlador();
     
     private void btnCheckoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckoutActionPerformed
-        // TODO add your handling code here:
+        // El botón de checkout comprueba que se ha seleccionado todo lo necesario
         if(btnGroupHamburguesa.getSelection()==null){
             JOptionPane.showMessageDialog(this, "¡No has seleccionado el tipo de hamburguesa!", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
         }else 
@@ -597,48 +628,82 @@ public class QueenApp extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "¡Oído cocina! Tu pedido está en marcha", "Pedido realizado", JOptionPane.INFORMATION_MESSAGE);
         }
         
-        
     }//GEN-LAST:event_btnCheckoutActionPerformed
 
     private void btnTerneraStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnTerneraStateChanged
-        // TODO add your handling code here:
+        // Si está seleccionado añade el producto ternera, si no, lo quita (si existe)
         if(btnTernera.isSelected()){
-            extraHamburguesa=1;
+            Producto ternera = new Producto("ternera",1);
+            ctrl.addProducto(ternera);
         }else{
-            extraHamburguesa=0;
+            ctrl.removeProducto("ternera");
         }
     }//GEN-LAST:event_btnTerneraStateChanged
 
     private void btnVeganaStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnVeganaStateChanged
-        // TODO add your handling code here:
+        // Si está seleccionado añade el producto vegana, si no, lo quita (si existe)
         if(btnVegana.isSelected()){
-            extraHamburguesa=1;
+            Producto vegana = new Producto("vegana",1);
+            ctrl.addProducto(vegana);
         }else{
-            extraHamburguesa=0;
+            ctrl.removeProducto("vegana");
         }
     }//GEN-LAST:event_btnVeganaStateChanged
 
     private void jPanelCheckoutComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelCheckoutComponentShown
-        // TODO add your handling code here:
         // REFRESCA LISTA DE CHECKOUT AL MOSTRAR TAB DE CHECKOUT
         
-        totalSinIVA=8+extraHamburguesa+extraPatatasCaseras+extraHamburguesaDoble+extraQueso+extraPatatas+extraSalsas;
-        labelTotalSinIVA.setText(totalSinIVA+" €");
+        //Actualizar el producto salsas en la lista de productos
+        Producto salsas = new Producto("salsas", ctrl.getPrecioSalsas(getCuantasSalsas()));
+        ctrl.addSalsas(salsas);
         
-        labelExtrasMenus.setText((extraHamburguesa+extraPatatasCaseras)+" €");
+        //Queda añadir lo de actualizar las label de los extras
+        labelSalsas.setText(ctrl.getPrecioSalsas(getCuantasSalsas())+" €");
+        labelTotalSinIVA.setText(ctrl.getTotalSinIVA()+" €");
+        labelIVA.setText(ctrl.getIVA()+" €");
+        labelTotalPVP.setText(ctrl.getTotalConIVA()+" €");
         
-        labelExtras.setText((extraHamburguesaDoble+extraQueso+extraPatatas)+" €");
-        
-        labelSalsas.setText((extraSalsas*0.50)+" €");
-        
-        IVA=totalSinIVA*0.21;
-        labelIVA.setText(IVA+" €");
-        
-        totalConIVA=totalSinIVA+IVA;
-        labelTotalPVP.setText(totalConIVA+" €");
-        
-        //System.out.println("hola component shown");
     }//GEN-LAST:event_jPanelCheckoutComponentShown
+
+    private void btnCaserasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnCaserasStateChanged
+        // Si está seleccionado añade el producto patatas caseras, si no, lo quita (si existe)
+        if(btnCaseras.isSelected()){
+            Producto papasCaseras = new Producto("caseras",1);
+            ctrl.addProducto(papasCaseras);
+        }else{
+            ctrl.removeProducto("caseras");
+        }
+    }//GEN-LAST:event_btnCaserasStateChanged
+
+    private void boxDobleStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_boxDobleStateChanged
+        // Si está seleccionado añade el producto burger doble, si no, lo quita (si existe)
+        if(boxDoble.isSelected()){
+            Producto burgerDoble = new Producto("burgerDoble",2);
+            ctrl.addProducto(burgerDoble);
+        }else{
+            ctrl.removeProducto("burgerDoble");
+        }
+    }//GEN-LAST:event_boxDobleStateChanged
+
+    private void boxQuesoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_boxQuesoStateChanged
+        // Si está seleccionado añade el producto extra queso, si no, lo quita (si existe)
+        if(boxQueso.isSelected()){
+            Producto extraQueso = new Producto("extraQueso",1);
+            ctrl.addProducto(extraQueso);
+        }else{
+            ctrl.removeProducto("extraQueso");
+        }
+    }//GEN-LAST:event_boxQuesoStateChanged
+
+    private void boxPatatasStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_boxPatatasStateChanged
+        // Si está seleccionado añade el producto extra queso, si no, lo quita (si existe)
+        if(boxPatatas.isSelected()){
+            Producto extraPapas = new Producto("extraPapas",1);
+            ctrl.addProducto(extraPapas);
+        }else{
+            ctrl.removeProducto("extraPapas");
+        }
+    }//GEN-LAST:event_boxPatatasStateChanged
 
     /**
      * @param args the command line arguments
@@ -667,11 +732,11 @@ public class QueenApp extends javax.swing.JFrame {
         }
         //</editor-fold>
         
-        //this.setLocationRelativeTo(null);
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new QueenApp().setVisible(true);
+                new QueenApp().setVisible(true);      
             }
         });
     }
@@ -708,6 +773,7 @@ public class QueenApp extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
