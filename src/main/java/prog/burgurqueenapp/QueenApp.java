@@ -588,28 +588,36 @@ public class QueenApp extends javax.swing.JFrame {
         });
 
         labelPrecioBase.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelPrecioBase.setText("8 €");
+        labelPrecioBase.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelPrecioBase.setText("8.00 €");
 
         labelExtrasMenu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelExtrasMenu.setText("0 €");
+        labelExtrasMenu.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelExtrasMenu.setText("0.00 €");
 
         labelExtrasOpcionales.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelExtrasOpcionales.setText("0 €");
+        labelExtrasOpcionales.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelExtrasOpcionales.setText("0.00 €");
 
         labelSalsas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelSalsas.setText("0 €");
+        labelSalsas.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelSalsas.setText("0.00 €");
 
         labelEnvioRecogida.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelEnvioRecogida.setText("0 €");
+        labelEnvioRecogida.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelEnvioRecogida.setText("0.00 €");
 
         labelTotalSinIVA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelTotalSinIVA.setText("8 €");
+        labelTotalSinIVA.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelTotalSinIVA.setText("8.00 €");
 
         labelIVA.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelIVA.setText("0 €");
+        labelIVA.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelIVA.setText("0.00 €");
 
         labelTotalPVP.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        labelTotalPVP.setText("0 €");
+        labelTotalPVP.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        labelTotalPVP.setText("0.00 €");
 
         javax.swing.GroupLayout jPanelCheckoutLayout = new javax.swing.GroupLayout(jPanelCheckout);
         jPanelCheckout.setLayout(jPanelCheckoutLayout);
@@ -625,33 +633,33 @@ public class QueenApp extends javax.swing.JFrame {
                             .addComponent(jLabel7)
                             .addComponent(jLabel8)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(labelTotalSinIVA)
-                                .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(labelIVA))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelExtrasMenu)
+                                    .addComponent(labelPrecioBase)
+                                    .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(labelExtrasOpcionales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(labelSalsas)))
+                                .addComponent(btnRecogidaLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanelCheckoutLayout.createSequentialGroup()
+                                    .addComponent(jLabel12)
+                                    .addGap(74, 74, 74)
+                                    .addComponent(labelTotalPVP))
+                                .addComponent(btnCheckout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnCheckout, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanelCheckoutLayout.createSequentialGroup()
-                                        .addComponent(jLabel12)
-                                        .addGap(74, 74, 74)
-                                        .addComponent(labelTotalPVP))
-                                    .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(labelExtrasMenu)
-                                        .addComponent(labelPrecioBase)
-                                        .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(labelExtrasOpcionales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(labelSalsas)))
-                                    .addComponent(btnRecogidaLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(33, 33, 33)))
-                        .addGap(102, 102, 102))
+                                .addGap(162, 162, 162)
+                                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(labelIVA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelTotalSinIVA, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(labelEnvioRecogida, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(108, 108, 108))
                     .addGroup(jPanelCheckoutLayout.createSequentialGroup()
                         .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
                             .addComponent(jLabel9)
-                            .addComponent(jLabel10))
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanelCheckoutLayout.setVerticalGroup(
@@ -686,7 +694,7 @@ public class QueenApp extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addComponent(labelEnvioRecogida))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanelCheckoutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel11)
                     .addComponent(labelIVA))
                 .addGap(42, 42, 42)
@@ -781,15 +789,15 @@ public class QueenApp extends javax.swing.JFrame {
         Producto salsas = new Producto("salsas", ctrl.getPrecioSalsas(getCuantasSalsas()));
         ctrl.addSalsas(salsas);
         
-        labelExtrasMenu.setText(ctrl.getExtrasMenu()+" €");
-        labelExtrasOpcionales.setText(ctrl.getExtrasOpcionales()+" €");
-        labelSalsas.setText(ctrl.getPrecioSalsas(getCuantasSalsas())+" €");
+        labelExtrasMenu.setText(String.format("%.2f", ctrl.getExtrasMenu())+" €");
+        labelExtrasOpcionales.setText(String.format("%.2f", ctrl.getExtrasOpcionales())+" €");
+        labelSalsas.setText(String.format("%.2f", ctrl.getPrecioSalsas(getCuantasSalsas()))+" €");
         
-        labelTotalSinIVA.setText(ctrl.getTotalSinIVA()+" €");
-        labelEnvioRecogida.setText(ctrl.getDescuento()+" €");
-        labelIVA.setText(ctrl.getIVA()+" €");
+        labelTotalSinIVA.setText(String.format("%.2f", ctrl.getTotalSinIVA())+" €");
+        labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
+        labelIVA.setText(String.format("%.2f",ctrl.getIVA())+" €");
         
-        labelTotalPVP.setText(ctrl.getPVPfinal()+" €");
+        labelTotalPVP.setText(String.format("%.2f", ctrl.getPVPfinal())+" €");
         
     }//GEN-LAST:event_jPanelCheckoutComponentShown
 
@@ -998,6 +1006,7 @@ public class QueenApp extends javax.swing.JFrame {
             ctrl.addProducto(p);
             ctrl.setDescuentoRecogidaLocal(false);
             ctrl.setEnvioORecogida("Envío a domicilio");
+            labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
         }else{
             ctrl.removeProducto("domicilio");
         }
@@ -1005,11 +1014,12 @@ public class QueenApp extends javax.swing.JFrame {
 
     private void btnRecogidaLocalStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_btnRecogidaLocalStateChanged
         // Si está seleccionado añade el producto a domicilio, si no, lo quita (si existe)
-        if(btnDomicilio.isSelected()){
+        if(btnRecogidaLocal.isSelected()){
             Producto p = new Producto("recogida",0);
             ctrl.addProducto(p);
             ctrl.setDescuentoRecogidaLocal(true);
             ctrl.setEnvioORecogida("Recogida en local");
+            labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
         }else{
             ctrl.removeProducto("recogida");
         }

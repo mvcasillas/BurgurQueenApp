@@ -117,7 +117,7 @@ public class Controlador {
                 + "\n-------------------------------"
                 + "\n"+envioORecogida
                 + "\n-------------------------------"
-                + "\nTotal............... "+getPVPfinal()+" €";
+                + "\nTotal............... "+String.format("%.2f", getPVPfinal())+" €\n";
         
     }
     
