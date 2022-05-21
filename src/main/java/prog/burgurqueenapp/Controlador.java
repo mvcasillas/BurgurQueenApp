@@ -72,6 +72,7 @@ public class Controlador {
     }
     
     public double getExtrasMenu(){
+        //Muestra la suma del precio de los extras (si hay)
         double extrasmenu=0;
         for(Producto p: productos){
             if(p.getNombreProducto().equals("ternera") || p.getNombreProducto().equals("vegana")
@@ -83,6 +84,7 @@ public class Controlador {
     }
     
     public double getExtrasOpcionales(){
+        //Muestra la suma del precio de los extras (si hay)
         double extrasOpcionales=0;
         for(Producto p: productos){
             if(p.getNombreProducto().equals("extraQueso") || p.getNombreProducto().equals("extraPapas")
@@ -106,6 +108,10 @@ public class Controlador {
         return totalPVP;
     } 
 
+    /**
+     * Devuelve un string con el resumen para el panel de confirmación
+     * @return 
+     */
     public String getResumenPedido() {
         return "Resumen del pedido:"
                 + "\n-------------------------------"

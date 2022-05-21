@@ -81,14 +81,10 @@
             </Property>
           </Properties>
           <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Hamburguesa"/>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
           </AccessibilityProperties>
-          <Events>
-            <EventHandler event="componentShown" listener="java.awt.event.ComponentListener" parameters="java.awt.event.ComponentEvent" handler="jPanelHamburguesaComponentShown"/>
-          </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new javax.swing.JPanel(){&#xa;    @Override&#xa;    protected void paintComponent(Graphics g)&#xa;    {&#xa;        super.paintComponent(g);&#xa;        g.drawImage((new ImageIcon(&quot;src\\main\\resources\\images\\graficoBurger_small.jpg&quot;).getImage()), 0, 0, this);&#xa;        try {&#xa;            BufferedImage image = ImageIO.read(new File(&quot;src\\main\\resources\\images\\graficoBurger_small.jpg&quot;));&#xa;        } catch (IOException ioe) {&#xa;            System.out.println(&quot;Could not read in the pic bitch&quot;);&#xa;            //System.exit(0);&#xa;        }&#xa;    }&#xa;}"/>
-            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="10"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">

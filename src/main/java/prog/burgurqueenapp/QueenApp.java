@@ -23,12 +23,14 @@ public class QueenApp extends javax.swing.JFrame {
      * Creates new form QueenApp
      */
     public QueenApp() {
-        initComponents();
-        //jPanelHamburguesa.repaint();
-        
+        initComponents();   
         this.setLocationRelativeTo(null);
     }
     
+    /**
+     * Método para obtener la suma de valores de los spinners de las salsas
+     * @return int total de salsas
+     */
     private int getCuantasSalsas(){
         int cuantas=0;
         cuantas+=(Integer)spinnerKetchup.getValue();
@@ -39,10 +41,6 @@ public class QueenApp extends javax.swing.JFrame {
         return cuantas;
     }
     
-//    @Override
-//    public void paint(Graphics g){
-//        ImageIcon imagenfondo= new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/images/graficoBlank_small.jpg")));
-//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -164,11 +162,6 @@ public class QueenApp extends javax.swing.JFrame {
                     jPanelHamburguesa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
                     jPanelHamburguesa.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
                     jPanelHamburguesa.setPreferredSize(new java.awt.Dimension(700, 700));
-                    jPanelHamburguesa.addComponentListener(new java.awt.event.ComponentAdapter() {
-                        public void componentShown(java.awt.event.ComponentEvent evt) {
-                            jPanelHamburguesaComponentShown(evt);
-                        }
-                    });
 
                     btnGroupHamburguesa.add(btnPollo);
                     btnPollo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -293,7 +286,7 @@ public class QueenApp extends javax.swing.JFrame {
                     );
 
                     jTabbedPane1.addTab("Hamburguesa", new javax.swing.ImageIcon(getClass().getResource("/images/iconBurgerSmall.png")), jPanelHamburguesa); // NOI18N
-                    jPanelHamburguesa.getAccessibleContext().setAccessibleName("Hamburguesa");
+                    jPanelHamburguesa.getAccessibleContext().setAccessibleName("");
 
                     jPanelComplementos.setBackground(new java.awt.Color(152, 234, 211));
                     jPanelComplementos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -795,15 +788,17 @@ public class QueenApp extends javax.swing.JFrame {
         if(btnGroupReparto.getSelection()==null){
             JOptionPane.showMessageDialog(this, "Por favor, elige primero el tipo de pedido (a domicilio o recogida en local)", "Pedido incompleto", JOptionPane.WARNING_MESSAGE);
         }else{
-            //Esto es que está todo elegido
+            //Esto es que está todo elegido y que se puede realizar el pedido
+            
+            //Panel de confirmación del pedido con el resumen del pedido
             int opcion =JOptionPane.showConfirmDialog(this, ctrl.getResumenPedido()+"\n¿Es correcto tu pedido?", "Confirmación del pedido", JOptionPane.YES_NO_OPTION);
             
             switch(opcion){
                 case 0: //Aceptar
                     JOptionPane.showMessageDialog(this, "¡Oído cocina! Tu pedido está en marcha", "Pedido realizado", JOptionPane.INFORMATION_MESSAGE);
                     //Una vez se ha realizado el pedido correctamente se cierra la app :D
-                    setVisible(false); //you can't see me!
-                    dispose(); //Destroy the JFrame object
+                    setVisible(false); //Oculta el frame
+                    dispose(); //Destruye (cierra) el frame
                     break;
                 case 1: //Cancelar
                     JOptionPane.showMessageDialog(this, "Vuelve atrás para revisar tu pedido", "Revisa tu pedido", JOptionPane.INFORMATION_MESSAGE);
@@ -839,12 +834,14 @@ public class QueenApp extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVeganaStateChanged
 
     private void jPanelCheckoutComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelCheckoutComponentShown
-        // REFRESCA LISTA DE CHECKOUT AL MOSTRAR TAB DE CHECKOUT
+        // MÉTODO LLAMADO CADA VEZ QUE SE MUESTRA EL TAB DE CHECKOUT 
+        // Como se puede ir de tab a tab en cualquier orden, cada vez que abres checkout se actualizan los datos que hayas introducido
         
         //Actualizar el producto salsas en la lista de productos
         Producto salsas = new Producto("salsas", ctrl.getPrecioSalsas(getCuantasSalsas()));
         ctrl.addSalsas(salsas);
         
+        //Actualizar los datos de la lista de checkout
         labelExtrasMenu.setText(String.format("%.2f", ctrl.getExtrasMenu())+" €");
         labelExtrasOpcionales.setText(String.format("%.2f", ctrl.getExtrasOpcionales())+" €");
         labelSalsas.setText(String.format("%.2f", ctrl.getPrecioSalsas(getCuantasSalsas()))+" €");
@@ -1062,6 +1059,8 @@ public class QueenApp extends javax.swing.JFrame {
             ctrl.addProducto(p);
             ctrl.setDescuentoRecogidaLocal(false);
             ctrl.setEnvioORecogida("Envío a domicilio");
+            
+            //Como este botón está en el tab de checkout, actualiza los datos de la lista de checkout
             labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
             labelIVA.setText(String.format("%.2f",ctrl.getIVA())+" €");
             labelTotalPVP.setText(String.format("%.2f", ctrl.getPVPfinal())+" €");
@@ -1077,6 +1076,8 @@ public class QueenApp extends javax.swing.JFrame {
             ctrl.addProducto(p);
             ctrl.setDescuentoRecogidaLocal(true);
             ctrl.setEnvioORecogida("Recogida en local");
+            
+            //Como este botón está en el tab de checkout, actualiza los datos de la lista de checkout
             labelEnvioRecogida.setText(String.format("%.2f", ctrl.getDescuento())+" €");
             labelIVA.setText(String.format("%.2f",ctrl.getIVA())+" €");
             labelTotalPVP.setText(String.format("%.2f", ctrl.getPVPfinal())+" €");
@@ -1084,14 +1085,6 @@ public class QueenApp extends javax.swing.JFrame {
             ctrl.removeProducto("recogida");
         }
     }//GEN-LAST:event_btnRecogidaLocalStateChanged
-
-    private void jPanelHamburguesaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_jPanelHamburguesaComponentShown
-        // TODO add your handling code here:
-        
-//        jPanelHamburguesa.prepareImage((new ImageIcon("src/main/images/graficoBurger_small.jpg").getImage()), 10, 10, null);
-//        jPanelHamburguesa.repaint();
-//        jPanelHamburguesa.setOpaque(false);
-    }//GEN-LAST:event_jPanelHamburguesaComponentShown
 
     /**
      * @param args the command line arguments
@@ -1125,7 +1118,6 @@ public class QueenApp extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new QueenApp().setVisible(true);
-                jPanelHamburguesa.repaint();
             }
         });
     }
@@ -1176,7 +1168,7 @@ public class QueenApp extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelCheckout;
     private javax.swing.JPanel jPanelComplementos;
     private javax.swing.JPanel jPanelExtras;
-    private static javax.swing.JPanel jPanelHamburguesa;
+    private javax.swing.JPanel jPanelHamburguesa;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JLabel labelBarbacoa;
     private javax.swing.JLabel labelEnvioRecogida;
